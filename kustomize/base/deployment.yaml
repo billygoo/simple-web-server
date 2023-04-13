@@ -1,8 +1,7 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-python
-  deployment: demo
 spec:
   replicas: 1
   template:
@@ -22,4 +21,3 @@ spec:
             configMapKeyRef:
               name: the-map
               key: staging
-

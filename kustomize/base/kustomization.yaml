@@ -9,8 +9,6 @@ resources:
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 images:
-- name: billygoo/hello-python
-  newTag: 0a9752659e9479ec12e2f55fe101f810f475f206
 - name: hello-python
   newName: billygoo/hello-python
   newTag: f13513bb1f8def855ae2ae2e5b7ef3ab5d0e7ce2
