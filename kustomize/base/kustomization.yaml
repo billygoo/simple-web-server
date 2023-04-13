@@ -12,5 +12,5 @@ images:
 - name: billygoo/hello-python
   newTag: 0a9752659e9479ec12e2f55fe101f810f475f206
 - name: hello-python
-  newName: test
-  newTag: "3"
+  newName: billygoo/hello-python
+  newTag: eda24af9629002e9d3f902b50ddf105e3b918aab
