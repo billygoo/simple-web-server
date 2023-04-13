@@ -1,0 +1,16 @@
+commonLabels:
+  app: hello-python
+
+resources:
+- config-map.yaml
+- deployment.yaml
+- service.yaml
+
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- name: billygoo/hello-python
+  newTag: 0a9752659e9479ec12e2f55fe101f810f475f206
+- name: hello-python
+  newName: test
+  newTag: "3"

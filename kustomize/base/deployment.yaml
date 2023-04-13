@@ -1,0 +1,25 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: hello-python
+  deployment: demo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hello-python
+    spec:
+      containers:
+      - name: hello-python
+        image: hello-python:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
+        env:
+        - name: VARIANT
+          valueFrom:
+            configMapKeyRef:
+              name: the-map
+              key: staging
+
