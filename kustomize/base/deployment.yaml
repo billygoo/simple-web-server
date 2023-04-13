@@ -12,7 +12,7 @@ spec:
       containers:
       - name: hello-python
         image: billygoo/hello-python:latest
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
         env:

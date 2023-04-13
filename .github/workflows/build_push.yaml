@@ -44,7 +44,7 @@ jobs:
 
     - name: Update Kubernetes resources
       run: |
-       cd kustomize/base
+       cd kustomize/overlays/staging
        kustomize edit set image hello-python=billygoo/hello-python:${{ github.sha }}
        cat kustomization.yaml
         
