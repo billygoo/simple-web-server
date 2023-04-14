@@ -45,13 +45,13 @@ jobs:
     - name: Update Kubernetes resources for staging
       run: |
        cd kustomize/overlays/staging
-       kustomize edit set image hello-python=billygoo/hello-python:${{ github.sha }}
+       kustomize edit set image billygoo/hello-python=billygoo/hello-python:${{ github.sha }}
        cat kustomization.yaml
 
     - name: Update Kubernetes resources for rollout
       run: |
        cd kustomize/rollout
-       kustomize edit set image hello-python=billygoo/hello-python:${{ github.sha }}
+       kustomize edit set image billygoo/hello-python=billygoo/hello-python:${{ github.sha }}
        cat kustomization.yaml
 
     - name: Commit files

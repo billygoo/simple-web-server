@@ -1,15 +1,12 @@
 namePrefix: rollout-
 commonLabels:
   variant: canary-release
-
 resources:
 - config-map.yaml
 - rollout.yaml
 - service.yaml
-
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 images:
-- name: hello-python
-  newName: billygoo/hello-python
+- name: billygoo/hello-python
   newTag: ba9a29f40490d1df7326fb024e1bd37750d803f0

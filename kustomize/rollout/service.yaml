@@ -24,7 +24,7 @@ spec:
   selector:
     app: hello-python
 ---
-apiVersion: extensions/v1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name:  hello-python-ingress
@@ -34,10 +34,13 @@ metadata:
     nginx.ingress.kubernetes.io/affinity-mode: persistent
 spec:
   rules:
-  - host: test.billygoo.com
+  - host: "test.billygoo.com"
     http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName:  hello-python-stable
-          servicePort: 80
+          service:
+            name: hello-python-stable
+            port:
+              number: 80
