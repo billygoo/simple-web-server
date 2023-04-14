@@ -12,4 +12,4 @@ kind: Kustomization
 images:
 - name: hello-python
   newName: billygoo/hello-python
-  newTag: 2e239d86aede4b40e75b9334892b3dc56e7a5b97
+  newTag: ba9a29f40490d1df7326fb024e1bd37750d803f0
