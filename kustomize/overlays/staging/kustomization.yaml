@@ -10,7 +10,7 @@ resources:
 images:
 - name: billygoo/hello-python
   newName: billygoo/hello-python
-  newTag: 70986a9e153ccf9a3122b0937c5e354e6b807fed
+  newTag: 0d340ba226556132da8726f80d12ba77fe912163
 - name: hello-python
   newName: billygoo/hello-python
   newTag: ba9a29f40490d1df7326fb024e1bd37750d803f0
