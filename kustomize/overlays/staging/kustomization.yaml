@@ -8,6 +8,9 @@ kind: Kustomization
 resources:
 - ../../base
 images:
+- name: billygoo/hello-python
+  newName: billygoo/hello-python
+  newTag: 8e0842f26eb9011f25c453c15de68718b62a2fc7
 - name: hello-python
   newName: billygoo/hello-python
   newTag: ba9a29f40490d1df7326fb024e1bd37750d803f0
