@@ -28,12 +28,13 @@ spec:
   revisionHistoryLimit: 3
   strategy:
     canary: #Indicates that the rollout should use the Canary strategy
+      stableSevice: hello-python-stable
+      canaryService: hello-python-canary
       maxSurge: "25%"
       maxUnavailable: 0
       steps:
       - setWeight: 25
       - pause:
           duration: 30s # 30 seconds
-      - setWeight: 100
-
-
+      # - setWeight: 100
+      - pause: {}
