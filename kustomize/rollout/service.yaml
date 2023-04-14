@@ -23,24 +23,24 @@ spec:
     targetPort: 5000
   selector:
     app: hello-python
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name:  hello-python-ingress
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/affinity: cookie
-    nginx.ingress.kubernetes.io/affinity-mode: persistent
-spec:
-  rules:
-  - host: "test.billygoo.com"
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: hello-python-stable
-            port:
-              number: 80
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name:  hello-python-ingress
+#   annotations:
+#     kubernetes.io/ingress.class: nginx
+#     nginx.ingress.kubernetes.io/affinity: cookie
+#     nginx.ingress.kubernetes.io/affinity-mode: persistent
+# spec:
+#   rules:
+#   - host: "test.billygoo.com"
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: hello-python-stable
+#             port:
+#               number: 80
