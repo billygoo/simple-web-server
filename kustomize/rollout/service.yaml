@@ -11,6 +11,19 @@ spec:
   selector:
     app:  hello-python
 ---
+apiVersion: v1
+kind: Service
+metadata:
+  name:  hello-python-canary
+  labels:
+    app:  hello-python
+spec:
+  ports:
+  - port: 6000
+    targetPort: 5000
+  selector:
+    app: hello-python
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
