@@ -28,8 +28,6 @@ spec:
   revisionHistoryLimit: 3
   strategy:
     canary: #Indicates that the rollout should use the Canary strategy
-      stableService: hello-python-stable
-      canaryService: hello-python-canary
       maxSurge: "25%"
       maxUnavailable: 0
       steps:
